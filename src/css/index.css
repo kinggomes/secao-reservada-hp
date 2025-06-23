@@ -1,0 +1,42 @@
+/* ESTILIZAÇÃO DO HEADER */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: rgb(167, 165, 165);
+    font-size: 18px;
+    padding: 20px 0px;
+}
+
+.header img {
+    width: 380px;
+    margin-bottom: 40px;
+}
+
+
+
+/* ESTILIZAÇÃO DO MAIN */
+
+.main {
+    background-image: url("../imagens/background-main.png"); /* Imagem de fundo do contâiner main */
+    min-height: 100vh; /* Tamanho mínimo para a imagem ser visível, ou seja, tamanho mínimo de 100vh ela será visível mesmo se não tiver nenhum elemento*/
+    background-size: cover; /* Faz com que a imagem tome todo o tamanho do contâiner */
+    background-repeat: no-repeat; /* Impede que a imagem se repita no fundo, aparecerá apenas uma */
+    background-position: center;  /* Centraliza a imagem completamente ao centro, fazendo com que seu centro e grande parte da imagem fique visível apenas no contãiner*/
+
+    /* Abaixo, faremos uma estilização única do main para que o espaço divisório entre o header e footer (que são apenas uma faixa preta) para o main, com sua imagem de fundo, não fique tão visível e tão feio. Antes, a divisão entre eles ficava bem visível, mas essa estilização abaixo cria um efeito de sombra no main que torna isso menos visível (use ctrl + ; na estilização para transformar em comentário e ver a diferença).
+
+    Primeira sombra (entre header e main): "box-shadow" é usado para criar efeitos de sombras em elementos, "inset" define que a sombra será interna (dentro do contêiner do elemento e não jogada pra fora), "0" é o deslocamente lateral, ou seja, sem sombra para os lados. "80" é o deslocamento vertical pra baixo (a sombra começa de cima e desce). "80" é o desfoque e suavidade da sombra. "-80" é o raio negativo da sombra, ou seja, o quão pra dentro do elemento ela está, concentrando ela apenas na borda superior. E "black" é a cor da sombra
+    
+    Segunda sombra (entre main e footer): Mesma coisa de antes, porém agora depois do "0" o primeiro "-80" é o inverso, agora a sombra começa de baixo e vai pra cima, na borda inferior*/
+    box-shadow: inset 0 80px 80px -80px black, inset 0 -80px 80px -80px black;
+}
+
+.conteudo-main {
+    max-width: 1180px;
+    margin: auto;
+    padding-top: 80px;
+}
+
