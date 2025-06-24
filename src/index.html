@@ -20,7 +20,7 @@
 
     <section class="header">
         <img src="imagens/logo-header.png" alt="logo do header">
-        <p>Seu melhor lugar para encontrar livros do universo mágico de Harry Potter!</p>
+        <p>Seu melhor lugar para encontrar livros e acessórios do universo mágico de Harry Potter!</p>
     </section>
 
 
@@ -28,7 +28,52 @@
     <section class="main">
 
         <div class="conteudo-main">
+
             <h1 class="subtitulo-main">Produtos</h1>
+
+            <div class="filtros">
+
+                <div class="categorias-livros">
+
+                    <span>Categorias</span>
+                    <select id="filtro-categoria">
+                        <option value="">Selecione a categoria do livro</option>
+                        <option value="principal">Livros Principais</option>
+                        <option value="adicional">Livros Adicionais</option>
+                        <option value="acessorio">Acessórios</option>
+                    </select>
+
+                </div>
+
+                <div class="preco-livros">
+                    <span>Preço Máximo (R$)</span>
+                    <input type="text" id="filtro-preco" placeholder="Digite um preço máximo...">
+                </div>
+
+                <button class="btn-filtro" id="botaoFiltro">Aplicar Filtros</button>
+
+            </div>
+
+
+            <div class="contâiner-livros">
+                <ul class="lista-livros">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
         </div>
 
     </section>

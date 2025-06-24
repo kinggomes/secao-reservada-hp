@@ -40,3 +40,75 @@
     padding-top: 80px;
 }
 
+
+.conteudo-main .subtitulo-main {
+    color: rgb(245, 175, 70);
+    font-weight: 500;
+    font-size: 26px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.conteudo-main .filtros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.filtros .categorias-livros, .filtros .preco-livros {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.filtros span {
+    color: rgb(245, 175, 70);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.categorias-livros select, .preco-livros input {
+    padding: 10px 8px;
+    border: 2px solid rgb(184, 126, 40);
+    border-radius: 12px;
+    background-color: black;
+    color:  rgb(245, 175, 70);
+}
+
+.categorias-livros select:focus, .preco-livros input:focus {
+    outline: none;
+}
+
+/* .categorias-livros select {
+   appearance: none;
+   background-image: url("../imagens/seta-dropdown.png") 97% center no-repeat;
+} */
+
+
+.filtros .btn-filtro {
+    all: unset;  /* Tira quaisquer estilos herdados pelo CSS, navegador, ou outro lugar. Serve para estilizações muito específicas, nesse caso, devido ao botão ter estilos herdados, não estava recebendo a fonte Rye padrão do site. Então tirei todos os estilos herdados para receber */
+    border: none;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(245, 175, 70);
+    align-self: end;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 14px 10px;
+    margin-right: 30px;
+}
+
+.filtros .btn-filtro:hover {
+    cursor: pointer;
+    padding: 16px 12px;
+    background-color: rgb(245, 175, 70);
+    color: white;
+    transition: 0.3s;
+}
+
+
+
+
+
