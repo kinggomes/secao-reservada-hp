@@ -7,3 +7,7 @@
 body {
     font-family: "Rye", sans-serif;
 }
+
+ul {
+    list-style: none;
+}

@@ -54,10 +54,10 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 80px;
+    margin-bottom: 90px;
 }
 
-.filtros .categorias-livros, .filtros .preco-livros {
+.filtros .categorias-itens, .filtros .preco-itens {
     display: flex;
     flex-direction: column;
     width: 25%;
@@ -69,7 +69,7 @@
     letter-spacing: 1px;
 }
 
-.categorias-livros select, .preco-livros input {
+.categorias-itens select, .preco-itens input {
     padding: 10px 8px;
     border: 2px solid rgb(184, 126, 40);
     border-radius: 12px;
@@ -77,11 +77,11 @@
     color:  rgb(245, 175, 70);
 }
 
-.categorias-livros select:focus, .preco-livros input:focus {
+.categorias-itens select:focus, .preco-itens input:focus {
     outline: none;
 }
 
-/* .categorias-livros select {
+/* .categorias-itens select {
    appearance: none;
    background-image: url("../imagens/seta-dropdown.png") 97% center no-repeat;
 } */
