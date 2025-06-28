@@ -26,6 +26,8 @@
     background-repeat: no-repeat; /* Impede que a imagem se repita no fundo, aparecerá apenas uma */
     background-position: center;  /* Centraliza a imagem completamente ao centro, fazendo com que seu centro e grande parte da imagem fique visível apenas no contãiner*/
 
+    background-attachment: fixed; /* Deixa a imagem fixa na tela, impedindo que ela se alarga conforme estiver mais conteúdo dentro, porém tira os efeitos de box shadow */
+
     /* Abaixo, faremos uma estilização única do main para que o espaço divisório entre o header e footer (que são apenas uma faixa preta) para o main, com sua imagem de fundo, não fique tão visível e tão feio. Antes, a divisão entre eles ficava bem visível, mas essa estilização abaixo cria um efeito de sombra no main que torna isso menos visível (use ctrl + ; na estilização para transformar em comentário e ver a diferença).
 
     Primeira sombra (entre header e main): "box-shadow" é usado para criar efeitos de sombras em elementos, "inset" define que a sombra será interna (dentro do contêiner do elemento e não jogada pra fora), "0" é o deslocamente lateral, ou seja, sem sombra para os lados. "80" é o deslocamento vertical pra baixo (a sombra começa de cima e desce). "80" é o desfoque e suavidade da sombra. "-80" é o raio negativo da sombra, ou seja, o quão pra dentro do elemento ela está, concentrando ela apenas na borda superior. E "black" é a cor da sombra
@@ -54,7 +56,7 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 90px;
+    margin-bottom: 120px;
 }
 
 .filtros .categorias-itens, .filtros .preco-itens {
@@ -102,10 +104,98 @@
 
 .filtros .btn-filtro:hover {
     cursor: pointer;
-    padding: 16px 12px;
+    transform: scale(1.08);
     background-color: rgb(245, 175, 70);
     color: white;
     transition: 0.3s;
+}
+
+
+
+.conteudo-main .container-itens {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;  /* align-items: flex-start se colocar scroll */
+    padding-bottom: 90px;
+    height: fit-content;   /* height: 80vh se colocar scroll */
+    /* overflow-y: auto;
+    scrollbar-width: none; */
+}
+
+.container-itens .lista-itens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 92px;
+    max-width: 100%;
+}
+
+.lista-itens .item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 230px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.lista-itens .item img {
+    width: 100%;
+    object-fit: cover;
+    padding: 20px;
+    border-bottom: 2px solid  rgb(184, 126, 40);
+}
+
+.lista-itens .item h3, span, a {
+    padding: 3px 0px 3px 10px;
+}
+
+.item .nome-item {
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: rgb(245, 175, 70);
+    padding-bottom: 2px;
+}
+
+.item .preco-item {
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #418f53;
+}
+
+.item .btn-comprar {
+    text-decoration: none;
+    font-family: sans-serif;
+    border: 2px solid rgb(231, 165, 65);
+    border-radius: 8px;
+    color: rgb(235, 167, 67);
+    padding: 10px;
+    align-self: center;
+    margin: 12px 0px 14px 0px;
+}
+
+.item .btn-comprar:hover {
+    transform: scale(1.06); /* Faz o botão crescer suavemente sem alterar o layout do card/contâiner pai ou os objetos ao redor */
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+/* ESTILIZAÇÃO DO FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: rgb(167, 165, 165);
+    font-size: 14px;
+    padding: 20px;
 }
 
 
