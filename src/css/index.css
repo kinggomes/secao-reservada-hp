@@ -26,14 +26,14 @@
     background-repeat: no-repeat; /* Impede que a imagem se repita no fundo, aparecerá apenas uma */
     background-position: center;  /* Centraliza a imagem completamente ao centro, fazendo com que seu centro e grande parte da imagem fique visível apenas no contãiner*/
 
-    background-attachment: fixed; /* Deixa a imagem fixa na tela, impedindo que ela se alarga conforme estiver mais conteúdo dentro, porém tira os efeitos de box shadow */
+    background-attachment: fixed; /* Deixa a imagem fixa na tela, impedindo que ela se alarga conforme estiver mais conteúdo dentro, porém tira os efeitos de box shadow se ambos estiverem no mesmo contâiner. Para resolver isso, deve-se diminuir o raio negativo da sombra pra ela ficar mais visível */
 
     /* Abaixo, faremos uma estilização única do main para que o espaço divisório entre o header e footer (que são apenas uma faixa preta) para o main, com sua imagem de fundo, não fique tão visível e tão feio. Antes, a divisão entre eles ficava bem visível, mas essa estilização abaixo cria um efeito de sombra no main que torna isso menos visível (use ctrl + ; na estilização para transformar em comentário e ver a diferença).
 
-    Primeira sombra (entre header e main): "box-shadow" é usado para criar efeitos de sombras em elementos, "inset" define que a sombra será interna (dentro do contêiner do elemento e não jogada pra fora), "0" é o deslocamente lateral, ou seja, sem sombra para os lados. "80" é o deslocamento vertical pra baixo (a sombra começa de cima e desce). "80" é o desfoque e suavidade da sombra. "-80" é o raio negativo da sombra, ou seja, o quão pra dentro do elemento ela está, concentrando ela apenas na borda superior. E "black" é a cor da sombra
+    Primeira sombra (entre header e main): "box-shadow" é usado para criar efeitos de sombras em elementos, "inset" define que a sombra será interna (dentro do contêiner do elemento e não jogada pra fora), "0" é o deslocamente lateral, ou seja, sem sombra para os lados. "80" é o deslocamento vertical pra baixo (a sombra começa de cima e desce). "80" é o desfoque e suavidade da sombra. "-62" é o raio negativo da sombra, ou seja, o quão pra dentro do elemento ela está, concentrando ela apenas na borda superior. E "black" é a cor da sombra
     
-    Segunda sombra (entre main e footer): Mesma coisa de antes, porém agora depois do "0" o primeiro "-80" é o inverso, agora a sombra começa de baixo e vai pra cima, na borda inferior*/
-    box-shadow: inset 0 80px 80px -80px black, inset 0 -80px 80px -80px black;
+    Segunda sombra (entre main e footer): Mesma coisa de antes, porém agora depois do "0" o primeiro "-80" é o inverso, agora a sombra começa de baixo e vai pra cima, na borda inferior.*/
+    box-shadow: inset 0 80px 80px -62px black, inset 0 -80px 80px -62px black;
 }
 
 .conteudo-main {
@@ -139,8 +139,7 @@
 }
 
 .lista-itens .item img {
-    width: 100%;
-    object-fit: cover;
+    width: 100%; /* A imagem toma todo o tamanho do contâiner img */
     padding: 20px;
     border-bottom: 2px solid  rgb(184, 126, 40);
 }
@@ -172,7 +171,7 @@
     color: rgb(235, 167, 67);
     padding: 10px;
     align-self: center;
-    margin: 12px 0px 14px 0px;
+    margin: 12px 0px 11px 0px;
 }
 
 .item .btn-comprar:hover {
