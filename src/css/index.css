@@ -183,9 +183,6 @@
 
 
 
-
-
-
 /* ESTILIZAÇÃO DO FOOTER */
 
 .footer {
@@ -195,6 +192,18 @@
     color: rgb(167, 165, 165);
     font-size: 14px;
     padding: 20px;
+}
+
+
+
+/* CLASSES DE INTERAÇÃO KS */
+
+.mostrar {
+    display: flex;
+}
+
+.esconder {
+    display: none;
 }
 
 
