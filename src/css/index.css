@@ -198,11 +198,11 @@
 
 /* CLASSES DE INTERAÇÃO KS */
 
-.mostrar {
+.item.mostrar {
     display: flex;
 }
 
-.esconder {
+.item.remover {
     display: none;
 }
 
