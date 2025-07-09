@@ -7,4 +7,4 @@ Alguns elementos de estilização foram baseados em outro site que fiz enquanto 
 Note que o site já está finalizado e pronto para uso ou análise. Porém, ainda está suscetível a algumas atualizações no futuro, pois conforme eu for tendo outras idéias eu irei adicioná-las no site, assim como em meus outros futuros projetos.
 
 
-email para contato: luquinhastasca@gmail.com
+link para acesso (GitHub Pages): https://kinggomes.github.io/secao-reservada-hp/
